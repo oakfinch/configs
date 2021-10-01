@@ -1,6 +1,6 @@
 {
   "name": "@oakfinch/eslint-config",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Base ESLint config for oakfinch projects",
   "main": "index.js",
   "files": [
