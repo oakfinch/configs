@@ -1,11 +1,11 @@
 {
   "name": "@oakfinch/tsconfig",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Base tsconfig for oakfinch projects",
-  "main": "./dist/index.js",
+  "main": "dist/index.js",
   "files": [
-    "./dist",
-    "./tsconfig.json"
+    "dist",
+    "tsconfig.json"
   ],
   "scripts": {
     "build": "true",
