@@ -8,7 +8,7 @@
     "./tsconfig.json"
   ],
   "scripts": {
-    "build": "rm -rf dist; tsc",
+    "build": "true",
     "test": "true"
   },
   "repository": {
