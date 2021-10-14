@@ -3,7 +3,15 @@ Base tsconfig for oakfinch projects
 
 ------
 
-[github](https://github.com/oakfinch/tsconfig) | [npm](https://www.npmjs.com/package/@oakfinch/tsconfig)
+[![license](https://badgen.net/github/license/oakfinch/tsconfig)](https://github.com/oakfinch/tsconfig/blob/main/LICENSE)
+[![TypeScript](https://badgen.net/badge/icon/TypeScript?icon=typescript&label=)](https://www.typescriptlang.org/)
+
+[![latest release on npm](https://badgen.net/npm/v/@oakfinch/tsconfig?icon=npm&label=)](https://npmjs.com/package/@oakfinch/tsconfig)
+[![latest release on github](https://badgen.net/github/release/oakfinch/tsconfig?icon=github&label=)](https://github.com/oakfinch/tsconfig/releases/latest)
+
+------
+
+[![github](https://badgen.net/badge/icon/github?icon=github&scale=2&label=)](https://github.com/oakfinch/tsconfig/)
 
 ------
 
