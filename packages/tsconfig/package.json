@@ -1,11 +1,13 @@
 {
   "name": "@oakfinch/tsconfig",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Base tsconfig for oakfinch projects",
-  "main": "dist/index.js",
+  "main": "index.js",
   "files": [
-    "dist",
-    "tsconfig.json"
+    "index.js",
+    "tsconfig.json",
+    "tsconfig.esm.json",
+    "tsconfig.cjs.json"
   ],
   "scripts": {
     "build": "true",
@@ -16,7 +18,9 @@
     "url": "git+https://github.com/oakfinch/tsconfig.git"
   },
   "keywords": [
-    "TypeScript"
+    "TypeScript",
+    "tsconfig",
+    "tsconfig.json"
   ],
   "author": "Nate Volker <natevolker@gmail.com>",
   "license": "MIT",
