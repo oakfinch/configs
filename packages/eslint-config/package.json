@@ -26,6 +26,14 @@
       ]
     }
   },
+  "files": [
+    "./.eslintrc.js",
+    "./.eslintrc.mjs",
+    "./.eslintrc.d.ts",
+    "./.eslintrc.typescript.js",
+    "./.eslintrc.typescript.mjs",
+    "./.eslintrc.typescript.d.ts"
+  ],
   "scripts": {
     "build": "exit 0",
     "test": "exit 0",
