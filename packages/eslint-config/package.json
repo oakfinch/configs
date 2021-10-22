@@ -2,13 +2,35 @@
   "name": "@oakfinch/eslint-config",
   "version": "1.0.4",
   "description": "Base ESLint config for oakfinch projects",
-  "main": "index.js",
-  "files": [
-    "index.js"
-  ],
+  "main": ".eslintrc.js",
+  "module": ".eslintrc.mjs",
+  "types": ".eslintrc.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./.eslintrc.mjs",
+      "require": "./.eslintrc.js"
+    },
+    "./typescript": {
+      "import": "./.eslintrc.typescript.mjs",
+      "require": "./.eslintrc.typescript.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./.eslintrc.d.ts"
+      ],
+      "./typescript": [
+        "./.eslintrc.typescript.d.ts"
+      ]
+    }
+  },
   "scripts": {
-    "build": "true",
-    "test": "true"
+    "build": "exit 0",
+    "test": "exit 0",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "repository": {
     "type": "git",
@@ -32,6 +54,11 @@
     "@typescript-eslint/parser": "^4.29.3",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-airbnb-typescript": "^14.0.1",
-    "eslint-plugin-import": "^2.25.2"
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-json": "^3.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.1",
+    "typescript": "^4.4.4"
   }
 }
