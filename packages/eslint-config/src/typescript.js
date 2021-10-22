@@ -5,7 +5,7 @@ module.exports = {
     node: true,
   },
   extends: [
-    './.eslintrc',
+    './base.js',
     'airbnb-typescript/base',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
@@ -19,24 +19,18 @@ module.exports = {
   plugins: [
     '@typescript-eslint',
   ],
-  rules: {
-    'import/no-extraneous-dependencies': [
-      'off',
-      {
-        devDependencies: [
-          '**/*.test-d.ts',
-        ],
-      },
-    ],
-  },
   settings: {
     'import/resolver': {
       node: {
         extensions: [
-          '.js',
           '.ts',
+          '.tsx',
         ],
       },
     },
+    'import/extensions': [
+      '.ts',
+      '.tsx',
+    ],
   },
 };
