@@ -1,0 +1,65 @@
+{
+  "name": "prettier-config",
+  "version": "1.0.0",
+  "description": "Shared prettier config for oakfinch projects",
+  "main": "./src/exports/config.js",
+  "module": "./src/exports/config.mjs",
+  "types": "./src/exports/config.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./src/exports/config.mjs",
+      "require": "./src/exports/config.cjs",
+      "default": "./src/exports/config.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./src/exports/config.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "eslint": "eslint --ext js,cjs,mjs,ts",
+    "prettier": "prettier -c",
+    "eslint:fix": "eslint --ext js,cjs,mjs,ts --fix",
+    "prettier:fix": "prettier --write",
+    "lint": "npm run eslint -- . && npm run prettier -c -- \"**\"",
+    "lint:fix": "npm run eslint:fix -- . && npm run prettier:fix -c -- \"**\"",
+    "typecheck": "exit 0",
+    "test": "exit 0",
+    "xpre-commit": "lint-staged",
+    "pre-commit": "exit 0",
+    "xcommit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+    "commit-msg": "exit 0",
+    "xpre-push": "npm run lint && npm run typecheck && npm run test",
+    "pre-push": "exit 0",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oakfinch/prettier-config.git"
+  },
+  "author": "Nate Volker <natevolker@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "prettier-airbnb-config": "^1.0.0"
+  },
+  "peerDependencies": {
+    "prettier": ">1.18.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.2.1",
+    "@commitlint/config-conventional": "^13.2.0",
+    "@oakfinch/eslint-config": "^1.1.2",
+    "@oakfinch/tsconfig": "^1.0.7",
+    "eslint": "^7.0.1",
+    "husky": "^7.0.0",
+    "lint-staged": "^11.2.3",
+    "prettier": "1.19.1"
+  }
+}

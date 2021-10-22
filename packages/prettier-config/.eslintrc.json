@@ -1,0 +1,11 @@
+{
+  "extends": "@oakfinch/eslint-config",
+  "overrides": [
+    {
+      "files": ["src/**/*"],
+      "rules": {
+        "global-require": "off"
+      }
+    }
+  ]
+}
