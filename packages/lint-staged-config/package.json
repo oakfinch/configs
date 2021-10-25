@@ -1,0 +1,22 @@
+{
+  "name": "@oakfinch/lint-staged-config",
+  "version": "1.0.0",
+  "description": "Shared base lint-staged config for @oakfinch projects",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oakfinch/lint-staged-config.git"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "test": "exit 0"
+  },
+  "author": "Nate Volker <natevolker@gmail.com>",
+  "license": "MIT"
+}
