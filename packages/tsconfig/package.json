@@ -1,19 +1,23 @@
 {
   "name": "@oakfinch/tsconfig",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Base tsconfig for oakfinch projects",
-  "main": "index.js",
+  "main": "dist/cjs/tsconfig.json",
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/cjs",
+    "./cjs": "./dist/cjs",
+    "./esm": "./dist/esm"
+  },
   "files": [
-    "index.js",
-    "tsconfig.json",
-    "tsconfig.esm.json",
-    "tsconfig.cjs.json",
-    "esm/tsconfig.json",
-    "cjs/tsconfig.json"
+    "dist"
   ],
   "scripts": {
-    "build": "true",
-    "test": "true"
+    "build:clean": "rm -rf dist",
+    "build:cjs": "mkdirp dist/cjs; cp src/cjs.json dist/cjs/tsconfig.json",
+    "build:esm": "mkdirp dist/esm; cp src/esm.json dist/esm/tsconfig.json",
+    "build": "npm run build:clean && npm run build:cjs && npm run build:esm",
+    "test": "exit 0"
   },
   "repository": {
     "type": "git",
@@ -32,5 +36,8 @@
   "homepage": "https://github.com/oakfinch/tsconfig#readme",
   "peerDependencies": {
     "typescript": ">=4.4.3"
+  },
+  "devDependencies": {
+    "mkdirp": "^1.0.4"
   }
 }

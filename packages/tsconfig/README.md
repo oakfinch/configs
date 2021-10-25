@@ -38,7 +38,7 @@ Defaults to a commonjs build with an es5 target, output to the `./dist` director
 `tsconfig.json`
 ```json
 {
-  "extends": "@oakfinch/tsconfig",
+  "extends": "@oakfinch/tsconfig"
 }
 ```
 
@@ -47,7 +47,7 @@ Defaults to a commonjs build with an es5 target, output to the `./dist` director
 `tsconfig.json`
 ```json
 {
-  "extends": "@oakfinch/tsconfig/tsconfig.cjs.json",
+  "extends": "@oakfinch/tsconfig/cjs"
 }
 ```
 
@@ -56,7 +56,7 @@ Defaults to a commonjs build with an es5 target, output to the `./dist` director
 `tsconfig.json`
 ```json
 {
-  "extends": "@oakfinch/tsconfig/tsconfig.esm.json",
+  "extends": "@oakfinch/tsconfig/esm",
 }
 ```
 
