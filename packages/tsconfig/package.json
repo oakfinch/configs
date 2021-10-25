@@ -1,21 +1,18 @@
 {
   "name": "@oakfinch/tsconfig",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Base tsconfig for oakfinch projects",
-  "main": "dist/cjs/tsconfig.json",
+  "main": "tsconfig.json",
   "sideEffects": false,
-  "exports": {
-    ".": "./dist/cjs",
-    "./cjs": "./dist/cjs",
-    "./esm": "./dist/esm"
-  },
   "files": [
-    "dist"
+    "tsconfig.json",
+    "esm",
+    "cjs"
   ],
   "scripts": {
-    "build:clean": "rm -rf dist",
-    "build:cjs": "mkdirp dist/cjs; cp src/cjs.json dist/cjs/tsconfig.json",
-    "build:esm": "mkdirp dist/esm; cp src/esm.json dist/esm/tsconfig.json",
+    "build:clean": "rm -rf esm && rm -rf cjs && rm -f tsconfig.json",
+    "build:cjs": "mkdirp cjs && cp tsconfig.cjs.json cjs/tsconfig.json && cp tsconfig.cjs.json tsconfig.json",
+    "build:esm": "mkdirp esm && cp tsconfig.esm.json esm/tsconfig.json",
     "build": "npm run build:clean && npm run build:cjs && npm run build:esm",
     "test": "exit 0"
   },
