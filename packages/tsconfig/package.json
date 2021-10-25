@@ -6,14 +6,11 @@
   "sideEffects": false,
   "files": [
     "tsconfig.json",
-    "esm",
-    "cjs"
+    "tsconfig.cjs.json",
+    "tsconfig.esm.json"
   ],
   "scripts": {
-    "build:clean": "rm -rf esm && rm -rf cjs && rm -f tsconfig.json",
-    "build:cjs": "mkdirp cjs && cp tsconfig.cjs.json cjs/tsconfig.json && cp tsconfig.cjs.json tsconfig.json",
-    "build:esm": "mkdirp esm && cp tsconfig.esm.json esm/tsconfig.json",
-    "build": "npm run build:clean && npm run build:cjs && npm run build:esm",
+    "build": "rm -f tsconfig.json && cp tsconfig.cjs.json tsconfig.json",
     "test": "exit 0"
   },
   "repository": {
