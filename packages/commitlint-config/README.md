@@ -30,11 +30,12 @@ yarn add -D @oakfinch/commitlint-config
 
 ## Usage
 
-`.lintstaged.js`
+`.commitlint.config.js`
 
 ```
 module.exports = {
-  ...require("@oakfinch/commitlint-config"),
-  // your rules here
-};
+    extends: [
+        '@oakfinch/commitlint-config'
+    ]
+}
 ```
