@@ -1,8 +1,8 @@
 {
   "name": "@oakfinch/tsconfig",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Base tsconfig for oakfinch projects",
-  "main": "tsconfig.json",
+  "main": "index.js",
   "sideEffects": false,
   "files": [
     "tsconfig.json",
