@@ -1,41 +1,48 @@
 {
   "name": "@oakfinch/eslint-config",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "Base ESLint config for oakfinch projects",
-  "main": "./src/exports/javascript.js",
-  "module": "./src/exports/javascript.mjs",
-  "types": "./src/exports/javascript.d.ts",
+  "main": "dist/javascript.js",
+  "module": "dist/javascript.mjs",
+  "types": "dist/javascript.d.ts",
   "sideEffects": false,
   "exports": {
     ".": {
-      "import": "./src/exports/javascript.mjs",
-      "require": "./src/exports/javascript.cjs",
-      "default": "./src/exports/javascript.js"
+      "import": "./dist/javascript.mjs",
+      "require": "./dist/javascript.js"
     },
     "./typescript": {
-      "import": "./src/exports/typescript.mjs",
-      "require": "./src/exports/typescript.cjs",
-      "default": "./src/exports/typescript.js"
+      "import": "./dist/typescript.mjs",
+      "require": "./dist/typescript.js"
     }
   },
   "typesVersions": {
     "*": {
       ".": [
-        "./src/exports/javascript.d.ts"
+        "./dist/javascript.d.ts"
       ],
       "./typescript": [
-        "./src/exports/typescript.d.ts"
+        "./dist/typescript.d.ts"
       ]
     }
   },
   "files": [
-    "src"
+    "src",
+    "dist"
   ],
   "scripts": {
-    "build": "exit 0",
-    "test": "exit 0",
-    "lint": "eslint . --ext js,mjs,cjs,ts,json",
-    "lint:fix": "eslint . --ext js,mjs,cjs,ts,json --fix"
+    "build:clean": "rm -rf dist",
+    "build:cjs:js": "echo \"module.exports = require('../src/javascript');\" > dist/javascript.js",
+    "build:cjs:ts": "echo \"module.exports = require('../src/typescript');\" > dist/typescript.js",
+    "build:cjs": "npm run build:cjs:js && npm run build:cjs:ts",
+    "build:esm:js": "echo \"export {default} from './javascript.js';\" > dist/javascript.mjs",
+    "build:esm:ts": "echo \"export {default} from './typescript.js';\" > dist/typescript.mjs",
+    "build:esm": "npm run build:esm:js && npm run build:esm:ts",
+    "build:types:js": "echo \"export {default} from './javascript.js';\" > dist/javascript.d.ts",
+    "build:types:ts": "echo \"export {default} from './typescript.js';\" > dist/typescript.d.ts",
+    "build:types": "npm run build:types:js && npm run build:types:ts",
+    "build": "npm run build:clean && mkdirp dist && npm run build:cjs && npm run build:esm && npm run build:types",
+    "test": "exit 0"
   },
   "repository": {
     "type": "git",
@@ -50,13 +57,7 @@
     "url": "https://github.com/oakfinch/eslint-config/issues"
   },
   "homepage": "https://github.com/oakfinch/eslint-config#readme",
-  "peerDependencies": {
-    "eslint": "^7.2.0",
-    "prettier": "^1.18.2",
-    "typescript": "^4.4.0"
-  },
   "dependencies": {
-    "@oakfinch/prettier-config": "^1.0.1",
     "@typescript-eslint/eslint-plugin": "^4.29.3",
     "@typescript-eslint/parser": "^4.29.3",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -67,9 +68,9 @@
     "eslint-plugin-prettier": "^3.4.1"
   },
   "devDependencies": {
-    "@oakfinch/tsconfig": "^1.0.7",
     "eslint": "^7.2.0",
+    "mkdirp": "^1.0.4",
     "prettier": "^1.18.2",
-    "typescript": "^4.4.0"
+    "typescript": "^4.4.4"
   }
 }
