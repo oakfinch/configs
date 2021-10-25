@@ -1,37 +1,22 @@
 {
   "name": "@oakfinch/prettier-config",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Shared base prettier config for oakfinch projects",
-  "main": "./src/exports/config.js",
-  "module": "./src/exports/config.mjs",
-  "types": "./src/exports/config.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "sideEffects": false,
-  "exports": {
-    ".": {
-      "import": "./src/exports/config.mjs",
-      "require": "./src/exports/config.cjs",
-      "default": "./src/exports/config.js"
-    }
-  },
-  "typesVersions": {
-    "*": {
-      ".": [
-        "./src/exports/config.d.qts"
-      ]
-    }
-  },
   "files": [
-    "src"
+    "src",
+    "dist"
   ],
   "scripts": {
-    "lint": "eslint --ext js,cjs,mjs,ts . && prettier -c \"**\"",
-    "lint:fix": "eslint --ext js,cjs,mjs,ts --fix . && prettier --write \"**\"",
-    "typecheck": "exit 0",
-    "test": "exit 0",
-    "pre-commit": "lint-staged",
-    "commit-msg": "commitlint -e",
-    "pre-push": "npm run lint && npm run typecheck && npm run test",
-    "prepare": "husky install"
+    "build:clean": "rm -rf dist",
+    "build:cjs": "echo \"module.exports = require('../src');\" > dist/index.js",
+    "build:esm": "echo \"export {default} from './index.js';\" > dist/index.mjs",
+    "build:types": "echo \"export {default} from './index.js';\" > dist/index.d.ts",
+    "build": "npm run build:clean && mkdirp dist && npm run build:cjs && npm run build:esm && npm run build:types",
+    "test": "exit 0"
   },
   "repository": {
     "type": "git",
@@ -46,13 +31,7 @@
     "prettier": "^1.18.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^13.2.1",
-    "@commitlint/config-conventional": "^13.2.0",
-    "@oakfinch/eslint-config": "^1.1.6",
-    "@oakfinch/tsconfig": "^1.0.7",
-    "eslint": "^7.2.0",
-    "husky": "^7.0.0",
-    "lint-staged": "^11.2.4",
+    "mkdirp": "^1.0.4",
     "prettier": "^1.18.2"
   }
 }
