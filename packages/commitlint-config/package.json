@@ -2,6 +2,10 @@
   "name": "@oakfinch/commitlint-config",
   "version": "1.0.0",
   "description": "Shared base commitlint config for @oakfinch projects",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oakfinch/commitlint-config.git"
+  },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
