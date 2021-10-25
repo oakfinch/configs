@@ -1,6 +1,6 @@
 {
   "name": "@oakfinch/eslint-config",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Base ESLint config for oakfinch projects",
   "main": "./src/exports/javascript.js",
   "module": "./src/exports/javascript.mjs",
@@ -52,7 +52,7 @@
   "homepage": "https://github.com/oakfinch/eslint-config#readme",
   "peerDependencies": {
     "eslint": "^7.2.0",
-    "prettier": "^1.8.2",
+    "prettier": "^1.18.2",
     "typescript": "^4.4.0"
   },
   "dependencies": {
@@ -68,8 +68,8 @@
   },
   "devDependencies": {
     "@oakfinch/tsconfig": "^1.0.7",
-    "eslint": "^7.32.0",
-    "prettier": "^1.8.2",
+    "eslint": "^7.2.0",
+    "prettier": "^1.18.2",
     "typescript": "^4.4.0"
   }
 }
