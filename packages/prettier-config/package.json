@@ -1,6 +1,6 @@
 {
   "name": "@oakfinch/prettier-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Shared base prettier config for oakfinch projects",
   "main": "./src/exports/config.js",
   "module": "./src/exports/config.mjs",
