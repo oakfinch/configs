@@ -4,7 +4,7 @@ module.exports = {
   ],
   overrides: [
     {
-      "files": ["src/**/*.ts", "src/**/*.tsx"],
+      files: ["src/**/*.ts", "src/**/*.tsx"],
       extends: [
         "../src/base.js",
         "airbnb-typescript/base",

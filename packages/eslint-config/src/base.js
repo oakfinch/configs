@@ -8,4 +8,5 @@ module.exports = {
     },
     "import/extensions": [".js", ".cjs", ".mjs", ".jsx", ".json"],
   },
+  ignorePatterns: ["coverage", "dist", "docs", "node_modules"]
 };
