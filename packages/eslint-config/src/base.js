@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["plugin:json/recommended", "airbnb-base"],
+  extends: ["plugin:json/recommended", "plugin:markdown/recommended", "airbnb-base"],
   settings: {
     "import/resolver": {
       node: {
