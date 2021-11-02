@@ -1,6 +1,6 @@
 {
   "name": "@oakfinch/jest-config",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Base Jest config for oakfinch projects",
   "main": "jest-preset.js",
   "files": [
@@ -28,5 +28,11 @@
     "jest": ">=27.2.4",
     "ts-jest": ">=27.0.5",
     "typescript": ">=4.4.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "jest": "^27.3.1",
+    "ts-jest": "^27.0.7",
+    "typescript": "^4.4.4"
   }
 }
