@@ -1,6 +1,6 @@
 {
   "name": "@oakfinch/tsconfig",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Base tsconfig for oakfinch projects",
   "main": "index.js",
   "sideEffects": false,
