@@ -1,0 +1,37 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Build
+
+# Controls when the workflow will run
+on:
+  workflow_call:
+  push:
+    branches:
+      - '**'
+      - '!main'
+    tags:
+      - '!v*'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - uses: oakfinch/configs/.github/workflows/install-node-dependencies.yml@latest
+      - name: Cache build
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-build
+        with:
+          path: .
+          key: ${{ runner.os }}-build-cache-${{ env.cache-name }}-${{ hashFiles('**/*') }}
+          restore-keys: |
+            ${{ runner.os }}-build-cache-${{ env.cache-name }}-
+            ${{ runner.os }}-build-cache-
+            ${{ runner.os }}-
+
+      - run: npx lerna run build
