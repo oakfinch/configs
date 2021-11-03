@@ -24,20 +24,20 @@ jobs:
   publish-npm:
     needs: [test, build]
     runs-on: ubuntu-latest
-      steps:
-        - uses: actions/download-artifact@v2
-          with:
-            name: build
-        - run: ls packages/*/
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: build
+      - run: ls packages/*/
 
   publish-gpr:
     needs: [test, build]
     runs-on: ubuntu-latest
-      steps:
-        - uses: actions/download-artifact@v2
-          with:
-            name: build
-        - run: ls packages/*/
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: build
+      - run: ls packages/*/
     # - uses: plutotcool/release@v1
     #   with:
     #     github_token:  ${{secrets.GITHUB_TOKEN}}
