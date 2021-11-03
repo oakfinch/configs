@@ -1,16 +1,7 @@
 name: Run Build
 on:
-  push:
-    branches:
-      - '**'
-      - '!main'
-    tags:
-      - '!v*'
   pull_request:
-    branches:
-      - '**'
-    tags:
-      - '!v*'
+    branches: dev
 jobs:
   build:
     runs-on: ubuntu-latest
