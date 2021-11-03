@@ -4,3 +4,4 @@ runs:
   using: "composite"
   steps:
     - run: npx lerna run test
+      shell: bash

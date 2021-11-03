@@ -12,4 +12,6 @@ runs:
         path: ~/.npm
         key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
     - run: npm install
+      shell: bash
     - run: npx lerna bootstrap
+      shell: bash
