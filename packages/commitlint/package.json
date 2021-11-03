@@ -2,28 +2,31 @@
   "name": "@oakfinch/commitlint-config",
   "version": "1.0.0",
   "description": "Shared base commitlint config for @oakfinch projects",
+  "author": "Nate Volker <natevolker@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "commitlint",
+    "Conventional Commits"
+  ],
+  "bugs": {
+    "url": "https://github.com/oakfinch/configs/issues"
+  },
+  "homepage": "https://github.com/oakfinch/configs/tree/main/packages/commitlint#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oakfinch/commitlint-config.git"
+    "url": "git+https://github.com/oakfinch/configs.git"
   },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "sideEffects": false,
+  "distDir": "dist",
   "files": [
     "src",
     "dist"
   ],
   "scripts": {
-    "build:clean": "rm -rf dist",
-    "build:cjs": "echo \"module.exports = require('../src');\" > dist/index.js",
-    "build:esm": "echo \"export {default} from './index.js';\" > dist/index.mjs",
-    "build:types": "echo \"export {default} from './index.js';\" > dist/index.d.ts",
-    "build": "npm run build:clean && mkdirp dist && npm run build:cjs && npm run build:esm && npm run build:types"
-  },
-  "author": "Nate Volker <natevolker@gmail.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "mkdirp": "^1.0.4"
+    "clean": "node ../../scripts/clean.js",
+    "build": "node ../../scripts/build.js"
   }
 }
