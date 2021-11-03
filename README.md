@@ -11,9 +11,9 @@ Lerna mono-repo of shared base config files for @oakfinch projects
 
 ## Packages
 
-* [@oakfinch/commitlint-config](./packages/commitlint)
-* [@oakfinch/eslint-config](./packages/eslint)
-* [@oakfinch/jest-config](./packages/jest)
-* [@oakfinch/lint-staged-config](./packages/lint-staged)
-* [@oakfinch/prettier-config](./packages/prettier)
-* [@oakfinch/tsconfig](./packages/tsconfig)
+* [@oakfinch/commitlint-config](packages/commitlint)
+* [@oakfinch/eslint-config](packages/eslint)
+* [@oakfinch/jest-config](packages/jest)
+* [@oakfinch/lint-staged-config](packages/lint-staged)
+* [@oakfinch/prettier-config](packages/prettier)
+* [@oakfinch/tsconfig](packages/tsconfig)
