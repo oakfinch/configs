@@ -1,6 +1,6 @@
 {
   "name": "@oakfinch/commitlint-config",
-  "version": "1.0.0",
+  "version": "1.1.13",
   "description": "Shared base commitlint config for @oakfinch projects",
   "author": "Nate Volker <natevolker@gmail.com>",
   "license": "MIT",
