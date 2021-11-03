@@ -16,10 +16,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 14
-      - uses: ./.github/workflows/partial-npm-cache.yml@latest
-      - uses: ./.github/workflows/partial-test.yml@latest
+      - uses: ./.github/actions/setup
+      - uses: ./.github/actions/test
       - uses: codecov/codecov-action@v2

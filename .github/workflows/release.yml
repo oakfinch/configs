@@ -6,23 +6,16 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 14
-      - uses: ./.github/workflows/partial-npm-cache.yml@latest
-      - uses: ./.github/workflows/partial-test.yml@latest
+      - uses: ./.github/actions/setup
+      - uses: ./.github/actions/test
+      
   release:
     needs: test
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
-      with:
-        node-version: 14
-    - uses: ./.github/workflows/partial-npm-cache.yml@latest
-    - uses: ./.github/workflows/partial-build.yml@latest
-    - run: ls packages/*/
+      - uses: ./.github/actions/setup
+      - uses: ./.github/actions/build
+      - run: ls packages/*/
     # - uses: plutotcool/release@v1
     #   with:
     #     github_token:  ${{secrets.GITHUB_TOKEN}}
