@@ -1,0 +1,11 @@
+name: Run Build
+on:
+  pull_request:
+    branches: main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions/setup
+      - run: npm run build
