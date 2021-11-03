@@ -16,12 +16,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    uses: oakfinch/configs/.github/workflows/install-node-dependencies.yml@latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
           node-version: 14
-      - uses: oakfinch/configs/.github/workflows/install-node-dependencies.yml@latest
       - name: Cache build
         uses: actions/cache@v2
         env:
