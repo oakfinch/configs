@@ -1,24 +1,28 @@
+name: Release
 on:
   push:
     branches: [main]
-
 jobs:
-  analyze:
-    uses: oakfinch/configs/.github/workflows/codeql-analysis.yml@latest
   test:
-    uses: oakfinch/configs/.github/workflows/test.yml@latest
-  build:
-    uses: oakfinch/configs/.github/workflows/build.yml@latest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - uses: ./.github/workflows/reusable/npm-cache.yml@latest
+      - uses: ./.github/workflows/test.yml@latest
   release:
-    needs: [test, build]
-    uses: oakfinch/configs/.github/workflows/build.yml@latest
+    needs: test
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v1
       with:
         node-version: 14
-    - run: node -v
+    - uses: ./.github/workflows/reusable/npm-cache.yml@latest
+    - uses: ./.github/workflows/build.yml@latest
+    - run: ls packages/*/
     # - uses: plutotcool/release@v1
     #   with:
     #     github_token:  ${{secrets.GITHUB_TOKEN}}

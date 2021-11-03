@@ -1,0 +1,8 @@
+name: Reusable Build Action
+on: workflow_call
+jobs:
+  build:
+    steps:
+      - run: npm install
+      - run: npx lerna bootstrap
+      - run: npx lerna build

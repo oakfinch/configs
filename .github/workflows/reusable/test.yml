@@ -1,0 +1,8 @@
+name: Reusable Test Action
+on: workflow_call
+jobs:
+  test:
+    steps:
+      - run: npm install
+      - run: npx lerna bootstrap
+      - run: npx lerna run test
