@@ -19,5 +19,5 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: 14
-    - uses: ./.github/workflows/reusable/npm-cache.yml@latest
-    - uses: ./.github/workflows/build.yml@latest
+    - uses: ./.github/workflows/partial-npm-cache.yml@latest
+    - uses: ./.github/workflows/partial-build.yml@latest
