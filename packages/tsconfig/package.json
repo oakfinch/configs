@@ -2,6 +2,21 @@
   "name": "@oakfinch/tsconfig",
   "version": "1.0.11",
   "description": "Shared base tsconfig for @oakfinch projects",
+  "author": "Nate Volker <natevolker@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "TypeScript",
+    "tsconfig",
+    "tsconfig.json"
+  ],
+  "bugs": {
+    "url": "https://github.com/oakfinch/configs/issues"
+  },
+  "homepage": "https://github.com/oakfinch/configs/tree/main/packages/tsconfig#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oakfinch/configs.git"
+  },
   "main": "index.js",
   "sideEffects": false,
   "files": [
@@ -10,28 +25,6 @@
     "tsconfig.esm.json"
   ],
   "scripts": {
-    "build": "rm -f tsconfig.json && cp tsconfig.cjs.json tsconfig.json",
-    "test": "exit 0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/oakfinch/tsconfig.git"
-  },
-  "keywords": [
-    "TypeScript",
-    "tsconfig",
-    "tsconfig.json"
-  ],
-  "author": "Nate Volker <natevolker@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/oakfinch/tsconfig/issues"
-  },
-  "homepage": "https://github.com/oakfinch/tsconfig#readme",
-  "peerDependencies": {
-    "typescript": ">=4.4.3"
-  },
-  "devDependencies": {
-    "mkdirp": "^1.0.4"
+    "clean": "node ../../scripts/clean.js"
   }
 }

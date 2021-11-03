@@ -13,6 +13,13 @@
     "url": "git+https://github.com/oakfinch/configs.git"
   },
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "lerna": "^4.0.0",
+    "mkdirp": "^1.0.4",
+    "rimraf": "^3.0.2"
+  },
+  "scripts": {
+    "clean": "lerna run clean && npx rimraf node_modules",
+    "build": "lerna run build",
+    "test": "lerna run test"
   }
 }

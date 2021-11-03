@@ -1,0 +1,23 @@
+name: Release
+on:
+  push: [release]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions/setup
+      - run: npm run test
+      
+  release:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions/setup
+      - run: npm run build
+      - run: ls packages/*/
+    # - uses: plutotcool/release@v1
+    #   with:
+    #     github_token:  ${{secrets.GITHUB_TOKEN}}
+    #     npm_token: ${{secrets.npm_token}}
