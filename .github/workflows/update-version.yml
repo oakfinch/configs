@@ -23,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/setup
-      - run: npx lerna version --yes --no-git-tag-version --conventional-commits
+      - run: npx lerna version --yes --conventional-commits
   
   # publish-npm:
   #   needs: [create-release]
