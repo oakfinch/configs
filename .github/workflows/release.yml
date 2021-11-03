@@ -1,8 +1,6 @@
 name: Release
 on:
-  push:
-    tags:
-      - 'v*'
+  push: [release]
 jobs:
   test:
     runs-on: ubuntu-latest
