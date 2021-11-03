@@ -1,0 +1,48 @@
+name: Update Version
+on:
+  push:
+    branches: main
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions/setup
+      - run: npm run test
+      
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions/setup
+      - run: npm run build
+
+  update-version:
+    needs: [test, build]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions/setup
+      - run: npx lerna version --yes --no-git-tag-version --conventional-commits
+  
+  # publish-npm:
+  #   needs: [create-release]
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/download-artifact@v2
+  #       with:
+  #         name: build
+  #     - run: ls packages/*/
+
+  # publish-gpr:
+  #   needs: [create-release]
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/download-artifact@v2
+  #       with:
+  #         name: build
+  #     - run: ls packages/*/
+    # - uses: plutotcool/release@v1
+    #   with:
+    #     github_token:  ${{secrets.GITHUB_TOKEN}}
+    #     npm_token: ${{secrets.npm_token}}
