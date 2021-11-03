@@ -19,8 +19,7 @@
     "build:cjs": "echo \"module.exports = require('../src');\" > dist/index.js",
     "build:esm": "echo \"export {default} from './index.js';\" > dist/index.mjs",
     "build:types": "echo \"export {default} from './index.js';\" > dist/index.d.ts",
-    "build": "npm run build:clean && mkdirp dist && npm run build:cjs && npm run build:esm && npm run build:types",
-    "test": "exit 0"
+    "build": "npm run build:clean && mkdirp dist && npm run build:cjs && npm run build:esm && npm run build:types"
   },
   "author": "Nate Volker <natevolker@gmail.com>",
   "license": "MIT",

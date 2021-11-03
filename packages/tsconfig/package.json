@@ -10,8 +10,7 @@
     "tsconfig.esm.json"
   ],
   "scripts": {
-    "build": "rm -f tsconfig.json && cp tsconfig.cjs.json tsconfig.json",
-    "test": "exit 0"
+    "build": "rm -f tsconfig.json && cp tsconfig.cjs.json tsconfig.json"
   },
   "repository": {
     "type": "git",

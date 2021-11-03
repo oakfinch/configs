@@ -6,10 +6,6 @@
   "files": [
     "jest-preset.js"
   ],
-  "scripts": {
-    "build": "true",
-    "test": "true"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/oakfinch/jest-config.git"

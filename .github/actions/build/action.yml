@@ -1,7 +1,0 @@
-name: Build
-description: Runs the build
-runs:
-  using: "composite"
-  steps:
-    - run: npx lerna run build
-      shell: bash

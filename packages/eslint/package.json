@@ -41,8 +41,7 @@
     "build:types:js": "echo \"export {default} from './javascript.js';\" > dist/javascript.d.ts",
     "build:types:ts": "echo \"export {default} from './typescript.js';\" > dist/typescript.d.ts",
     "build:types": "npm run build:types:js && npm run build:types:ts",
-    "build": "npm run build:clean && mkdirp dist && npm run build:cjs && npm run build:esm && npm run build:types",
-    "test": "exit 0"
+    "build": "npm run build:clean && mkdirp dist && npm run build:cjs && npm run build:esm && npm run build:types"
   },
   "repository": {
     "type": "git",

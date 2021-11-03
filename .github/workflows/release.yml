@@ -6,8 +6,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - uses: ./.github/actions/setup
-      - uses: ./.github/actions/test
+      - run: npm run test
       
   release:
     needs: test
@@ -15,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/setup
-      - uses: ./.github/actions/build
+      - run: npm run build
       - run: ls packages/*/
     # - uses: plutotcool/release@v1
     #   with:
