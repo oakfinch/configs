@@ -10,13 +10,35 @@ jobs:
       - uses: ./.github/actions/setup
       - run: npm run test
       
-  release:
-    needs: test
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/setup
       - run: npm run build
+      - uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: |
+            .
+            !**/node_modules
+  
+  publish-npm:
+    needs: [test, build]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: build
+      - run: ls packages/*/
+
+  publish-gpr:
+    needs: [test, build]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: build
       - run: ls packages/*/
     # - uses: plutotcool/release@v1
     #   with:
