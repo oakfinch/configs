@@ -22,6 +22,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/setup
+      - run: git config user.email "github-actions-bot@egithub.com"
+      - run: git config user.name "Github Actions Bot"
       - run: npx lerna version --yes --conventional-commits
         with:
           github_token:  ${{secrets.GITHUB_TOKEN}}
