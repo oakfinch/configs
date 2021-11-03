@@ -1,9 +1,9 @@
 # eslint-config
-Base ESLint config for oakfinch projects
+Shared base [ESLint](https://eslint.org) config for @oakfinch projects
 
 ------
 
-[![license](https://badgen.net/github/license/oakfinch/eslint-config)](https://github.com/oakfinch/eslint-config/blob/main/LICENSE)
+[![license](https://badgen.net/github/license/oakfinch/configs)](https://github.com/oakfinch/configs/blob/main/LICENSE)
 [![TypeScript](https://badgen.net/badge/icon/TypeScript?icon=typescript&label=)](https://www.typescriptlang.org/)
 
 [![latest release on npm](https://badgen.net/npm/v/@oakfinch/eslint-config?icon=npm&label=)](https://npmjs.com/package/@oakfinch/eslint-config)
@@ -21,7 +21,7 @@ Base ESLint config for oakfinch projects
 Using `npm`:
 
 ```
-npm install --save-dev @oakfinch/eslint-config
+npm install -D @oakfinch/eslint-config
 ```
 
 Using `yarn`:

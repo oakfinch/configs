@@ -1,10 +1,9 @@
 # lint-staged-config
-
-Base lint-staged config for oakfinch projects
+Shared base [lint-staged](https://github.com/okonet/lint-staged) config for @oakfinch projects
 
 ---
 
-[![license](https://badgen.net/github/license/oakfinch/lint-staged-config)](https://github.com/oakfinch/lint-staged-config/blob/main/LICENSE)
+[![license](https://badgen.net/github/license/oakfinch/configs)](https://github.com/oakfinch/configs/blob/main/LICENSE)
 [![latest release on npm](https://badgen.net/npm/v/@oakfinch/lint-staged-config?icon=npm&label=)](https://npmjs.com/package/@oakfinch/lint-staged-config)
 [![latest release on github](https://badgen.net/github/release/oakfinch/lint-staged-config?icon=github&label=)](https://github.com/oakfinch/lint-staged-config/releases/latest)
 

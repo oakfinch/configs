@@ -1,6 +1,17 @@
 {
-  "name": "root",
+  "name": "@oakfinch/configs",
+  "description": "Lerna mono-repo of shared base config files for @oakfinch projects",
+  "author": "Nate Volker <natevolker@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oakfinch/configs/issues"
+  },
+  "homepage": "https://github.com/oakfinch/configs#readme",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oakfinch/configs.git"
+  },
   "devDependencies": {
     "lerna": "^4.0.0"
   }

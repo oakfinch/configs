@@ -1,10 +1,9 @@
 # commitlint-config
-
-Base commitlint config for oakfinch projects
+Shared base [commitlint](https://commitlint.js.org) config for @oakfinch projects
 
 ---
 
-[![license](https://badgen.net/github/license/oakfinch/commitlint-config)](https://github.com/oakfinch/commitlint-config/blob/main/LICENSE)
+[![license](https://badgen.net/github/license/oakfinch/configs)](https://github.com/oakfinch/configs/blob/main/LICENSE)
 [![latest release on npm](https://badgen.net/npm/v/@oakfinch/commitlint-config?icon=npm&label=)](https://npmjs.com/package/@oakfinch/commitlint-config)
 [![latest release on github](https://badgen.net/github/release/oakfinch/commitlint-config?icon=github&label=)](https://github.com/oakfinch/commitlint-config/releases/latest)
 
@@ -19,7 +18,7 @@ Base commitlint config for oakfinch projects
 Using `npm`:
 
 ```
-npm install --save-dev @oakfinch/commitlint-config
+npm install -D @oakfinch/commitlint-config
 ```
 
 Using `yarn`:

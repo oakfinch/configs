@@ -1,7 +1,7 @@
 {
   "name": "@oakfinch/jest-config",
   "version": "1.0.3",
-  "description": "Base Jest config for oakfinch projects",
+  "description": "Shared base Jest config for @oakfinch projects",
   "main": "jest-preset.js",
   "files": [
     "jest-preset.js"

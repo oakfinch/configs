@@ -1,6 +1,6 @@
 # @oakfinch configs
 
-Lerna mono-repo of shared base config files for @oakfinch projects
+[Lerna](https://lerna.js.org) mono-repo of shared base config files for @oakfinch projects
 
 ---
 

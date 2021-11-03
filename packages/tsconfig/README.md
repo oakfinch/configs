@@ -1,9 +1,9 @@
 # tsconfig
-Base tsconfig for oakfinch projects
+Shared base [tsconfig](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) for @oakfinch projects
 
 ------
 
-[![license](https://badgen.net/github/license/oakfinch/tsconfig)](https://github.com/oakfinch/tsconfig/blob/main/LICENSE)
+[![license](https://badgen.net/github/license/oakfinch/configs)](https://github.com/oakfinch/configs/blob/main/LICENSE)
 [![TypeScript](https://badgen.net/badge/icon/TypeScript?icon=typescript&label=)](https://www.typescriptlang.org/)
 
 [![latest release on npm](https://badgen.net/npm/v/@oakfinch/tsconfig?icon=npm&label=)](https://npmjs.com/package/@oakfinch/tsconfig)

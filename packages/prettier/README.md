@@ -1,10 +1,9 @@
 # prettier-config
-
-Base Prettier config for oakfinch projects
+Shared base [Prettier](https://prettier.io) config for @oakfinch projects
 
 ---
 
-[![license](https://badgen.net/github/license/oakfinch/prettier-config)](https://github.com/oakfinch/prettier-config/blob/main/LICENSE)
+[![license](https://badgen.net/github/license/oakfinch/configs)](https://github.com/oakfinch/configs/blob/main/LICENSE)
 [![TypeScript](https://badgen.net/badge/icon/TypeScript?icon=typescript&label=)](https://www.typescriptlang.org/)
 
 [![latest release on npm](https://badgen.net/npm/v/@oakfinch/prettier-config?icon=npm&label=)](https://npmjs.com/package/@oakfinch/prettier-config)
@@ -16,12 +15,19 @@ Base Prettier config for oakfinch projects
 
 ---
 
+## NOTE
+
+This package is used by [`@oakfinch/eslint-config`](../eslint) via
+[`eslint-plugin-prettier`](https://github.com/prettier/eslint-plugin-prettier).
+If you're using `@oakfinch/eslint-config` and don't need to add any custom
+prettier configuration, you do not need this package.
+
 ## Installation
 
 Using `npm`:
 
 ```
-npm install --save-dev @oakfinch/prettier-config
+npm install -D @oakfinch/prettier-config
 ```
 
 Using `yarn`:
