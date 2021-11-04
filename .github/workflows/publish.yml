@@ -33,7 +33,7 @@ jobs:
           key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
       - run: npm install && npx lerna bootstrap
       - run: npm run build
-      - run: npx lerna publish --yes
+      - run: npx lerna run publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
@@ -52,7 +52,7 @@ jobs:
           key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
       - run: npm install && npx lerna bootstrap
       - run: npm run build
-      - run: npx lerna publish --yes
+      - run: npx lerna run publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
