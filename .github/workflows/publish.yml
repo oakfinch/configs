@@ -33,7 +33,7 @@ jobs:
           key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
       - run: npm install && npx lerna bootstrap
       - run: npm run build
-      - run: npx lerna exec -- npm publish --access public
+      - run: npx lerna publish from-package --registry=https://registry.npmjs.org/ --yes
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
@@ -52,23 +52,6 @@ jobs:
           key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
       - run: npm install && npx lerna bootstrap
       - run: npm run build
-      - run: npx lerna exec -- npm publish --access public
+      - run: npx lerna publish from-package --registry=https://npm.pkg.github.com/ --yes
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-
-  # publish-gpr:
-  #   needs: [test, build]
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - uses: ./.github/actions/setup
-  #     - uses: actions/download-artifact@v2
-#         with:
-#           name: build
-#       - run: echo "registry=https://npm.pkg.github.com/" > ./**/.npmrc
-#       - run: echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}" >> ./**/.npmrc
-#         env:
-#           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-#       - run: npx lerna publish --yes
-#         env:
-#           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
