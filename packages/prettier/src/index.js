@@ -1,4 +1,4 @@
-const { config, jsxBracketSameLine: bracketSameLine } = require('prettier-airbnb-config')
+const { jsxBracketSameLine: bracketSameLine, ...config } = require('prettier-airbnb-config')
 
 module.exports = {
   bracketSameLine,
