@@ -4,28 +4,19 @@ module.exports = {
   ],
   overrides: [
     {
-      files: ["src/**/*.ts", "src/**/*.tsx"],
+      files: ["src/**/*.+(ts|tsx)"],
       extends: [
         "../src/base.js",
-        "airbnb-typescript/base",
+        "../src/airbnb-typescript.js",
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        // prettier plugin must be last
         "plugin:prettier/recommended",
       ],
-      parser: "@typescript-eslint/parser",
       parserOptions: {
         ecmaVersion: 12,
         sourceType: "module",
         project: "./tsconfig.json",
-      },
-      plugins: ["@typescript-eslint"],
-      settings: {
-        "import/resolver": {
-          node: {
-            extensions: [".ts", ".tsx"],
-          },
-        },
-        "import/extensions": [".ts", ".tsx"],
       },
     }
   ],
