@@ -1,6 +1,6 @@
 {
   "name": "@oakfinch/rollup-config",
-  "version": "2.0.6",
+  "version": "2.0.11",
   "description": "Shared base rollup config for @oakfinch projects",
   "author": "Nate Volker <natevolker@gmail.com>",
   "license": "MIT",
