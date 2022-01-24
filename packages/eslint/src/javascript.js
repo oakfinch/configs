@@ -6,5 +6,5 @@ module.exports = {
     // prettier plugin must be last
     "plugin:prettier/recommended"
   ],
-  overrides: [{ files: ["**/*.+(jsx|cjs|mjs)"] }],
+  overrides: [{ files: ["src/**/*.+(jsx|cjs|mjs)"] }],
 }
