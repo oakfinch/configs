@@ -4,13 +4,6 @@ module.exports = {
     "plugin:markdown/recommended",
     "airbnb-base"
   ],
-  settings: {
-    "import/resolver": {
-      node: {
-        extensions: [".cjs", ".mjs", ".json"],
-      },
-    },
-    "import/extensions": [".cjs", ".mjs", ".json"],
-  },
+  overrides: [{ files: ["**/*.+(jsx|cjs|mjs)"] }],
   ignorePatterns: ["coverage", "dist", "docs", "node_modules"]
 };

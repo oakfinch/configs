@@ -4,10 +4,10 @@ module.exports = {
   ],
   overrides: [
     {
-      files: ["src/**/*.+(ts|tsx)"],
+      files: ["**/*.+(ts|tsx)"],
       extends: [
         "../src/base.js",
-        "../src/airbnb-typescript.js",
+        "airbnb-typescript/base",
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
         // prettier plugin must be last

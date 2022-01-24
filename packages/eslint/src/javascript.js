@@ -4,4 +4,4 @@ module.exports = {
     // prettier plugin must be last
     "plugin:prettier/recommended"
   ]
-};
+}
