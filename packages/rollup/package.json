@@ -1,0 +1,30 @@
+{
+  "name": "@oakfinch/rollup-config",
+  "version": "2.0.0",
+  "description": "Shared base rollup config for @oakfinch projects",
+  "author": "Nate Volker <natevolker@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oakfinch/configs/issues"
+  },
+  "homepage": "https://github.com/oakfinch/configs/tree/main/packages/rollup#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oakfinch/configs.git"
+  },
+  "type": "module",
+  "main": "./index.js",
+  "sideEffects": false,
+  "exports": {
+    ".": "./index.js",
+    "./typescript": "./index.js"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "clean": "node ../../scripts/clean.js",
+    "build": "node ../../scripts/build.js"
+  }
+}

@@ -21,5 +21,10 @@
     "clean": "lerna run clean && npx rimraf node_modules",
     "build": "lerna run build",
     "test": "lerna run test"
+  },
+  "dependencies": {
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "@rollup/plugin-typescript": "^8.3.0",
+    "pkg-up": "^4.0.0"
   }
 }
