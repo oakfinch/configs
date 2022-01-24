@@ -13,16 +13,16 @@
     "url": "git+https://github.com/oakfinch/configs.git"
   },
   "type": "module",
-  "main": "./index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "sideEffects": false,
   "exports": {
-    ".": "./index.js",
-    "./typescript": "./index.js"
+    ".": "./dist/index.mjs",
+    "./typescript": "./dist/index.mjs"
   },
   "files": [
     "src",
-    "dist",
-    "./index.js"
+    "dist"
   ],
   "scripts": {
     "clean": "node ../../scripts/clean.js",
