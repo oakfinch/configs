@@ -21,7 +21,8 @@
   },
   "files": [
     "src",
-    "dist"
+    "dist",
+    "./index.js"
   ],
   "scripts": {
     "clean": "node ../../scripts/clean.js",
