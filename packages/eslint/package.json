@@ -1,6 +1,6 @@
 {
   "name": "@oakfinch/eslint-config",
-  "version": "2.0.4",
+  "version": "2.0.7",
   "description": "Shared base ESLint config for @oakfinch projects",
   "author": "Nate Volker <natevolker@gmail.com>",
   "license": "MIT",
