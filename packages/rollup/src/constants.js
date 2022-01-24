@@ -6,7 +6,7 @@ export const PROJECT_ROOT = dirname(pkgUpSync({ cwd: process.cwd() }))
 
 export const TSCONFIG = `${PROJECT_ROOT}/tsconfig.json`
 
-export const IS_TYPESCRIPT = existsSync(paths.TSCONFIG)
+export const IS_TYPESCRIPT = existsSync(TSCONFIG)
 
 export const ENVS = {
   PROD: 'production',

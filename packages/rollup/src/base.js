@@ -1,6 +1,6 @@
 import typescript from '@rollup/plugin-typescript'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
-import { PATHS } from './constants'
+import { PATHS } from './constants.js'
 
 export const BASE = {
   cache: true,

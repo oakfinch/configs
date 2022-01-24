@@ -1,5 +1,5 @@
-import { BASE } from './base'
-import { OUT_DIR, MODULE_FORMATS, PATHS, APP_FILENAME, COMPACT } from './constants'
+import { BASE } from './base.js'
+import { OUT_DIR, MODULE_FORMATS, PATHS, APP_FILENAME, COMPACT } from './constants.js'
 
 const moduleConfig = PATHS.MODULE_ENTRY && {
   ...BASE,
