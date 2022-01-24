@@ -1,8 +1,8 @@
-import typescript from '@rollup/plugin-typescript'
-import { nodeResolve } from '@rollup/plugin-node-resolve'
-import { PATHS } from './constants'
+const typescript = require('@rollup/plugin-typescript')
+const { nodeResolve } = require('@rollup/plugin-node-resolve')
+const { PATHS } = require('./constants')
 
-export const BASE = {
+module.exports.BASE = {
   cache: true,
   output: {
     sourcemap: true,
@@ -13,4 +13,4 @@ export const BASE = {
   ],
 }
 
-export default BASE
+module.exports.default = BASE
