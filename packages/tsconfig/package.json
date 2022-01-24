@@ -1,6 +1,6 @@
 {
   "name": "@oakfinch/tsconfig",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "Shared base tsconfig for @oakfinch projects",
   "author": "Nate Volker <natevolker@gmail.com>",
   "license": "MIT",
