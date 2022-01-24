@@ -26,6 +26,7 @@
     "clean": "node ../../scripts/clean.js",
     "build": "node ../../scripts/build.js"
   },
+  "type": "module",
   "gitHead": "b0f4fe28da18f88f47727338405e3c2b17fd68b6",
   "dependencies": {
     "@rollup/plugin-node-resolve": "^13.1.3",

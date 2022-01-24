@@ -1,33 +1,33 @@
-const { existsSync } = require('fs')
-const { dirname } = require('path')
-const { pkgUpSync } = require('pkg-up')
+import { existsSync } from 'fs'
+import { dirname } from 'path'
+import { pkgUpSync } from 'pkg-up'
 
-module.exports.PROJECT_ROOT = dirname(pkgUpSync({ cwd: process.cwd() }))
+export const PROJECT_ROOT = dirname(pkgUpSync({ cwd: process.cwd() }))
 
-module.exports.TSCONFIG = `${PROJECT_ROOT}/tsconfig.json`
+export const TSCONFIG = `${PROJECT_ROOT}/tsconfig.json`
 
-module.exports.IS_TYPESCRIPT = existsSync(paths.TSCONFIG)
+export const IS_TYPESCRIPT = existsSync(paths.TSCONFIG)
 
-module.exports.ENVS = {
+export const ENVS = {
   PROD: 'production',
   DEV: 'development'
 }
 
-module.exports.OUT_DIR = 'dist'
+export const OUT_DIR = 'dist'
 
-module.exports.MODULE_FORMATS = [ 'es', 'cjs']
+export const MODULE_FORMATS = [ 'es', 'cjs']
 
-module.exports.DEFAULT_NODE_ENV = ENVS.PROD
+export const DEFAULT_NODE_ENV = ENVS.PROD
 
-module.exports.NODE_ENV = process.env.NODE_ENV ?? DEFAULT_NODE_ENV
+export const NODE_ENV = process.env.NODE_ENV ?? DEFAULT_NODE_ENV
 
-module.exports.MINIFY_ENVS = [ENVS.PROD]
+export const MINIFY_ENVS = [ENVS.PROD]
 
-module.exports.COMPACT = MINIFY_ENVS.includes(NODE_ENV)
+export const COMPACT = MINIFY_ENVS.includes(NODE_ENV)
 
-module.exports.APP_FILENAME = `app.bundle.${COMPACT ? '.min' : ''}.js`
+export const APP_FILENAME = `app.bundle.${COMPACT ? '.min' : ''}.js`
 
-module.exports.PATHS = Object.fromEntries(
+export const PATHS = Object.fromEntries(
   Object.entries({
     TSCONFIG,
     MODULE_ENTRY: `${PROJECT_ROOT}/src/index.[ext]`,

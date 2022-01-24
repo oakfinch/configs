@@ -1,5 +1,5 @@
-const { BASE } = require('./base')
-const { OUT_DIR, MODULE_FORMATS, PATHS, APP_FILENAME, COMPACT } = require('./constants')
+import { BASE } from './base'
+import { OUT_DIR, MODULE_FORMATS, PATHS, APP_FILENAME, COMPACT } from './constants'
 
 const moduleConfig = PATHS.MODULE_ENTRY && {
   ...BASE,
@@ -23,7 +23,9 @@ const appConfig = PATHS.APP_ENTRY && {
   }
 }
 
-module.exports = [
+export const config = [
   ...(moduleConfig ? [moduleConfig] : []),
   ...(appConfig ? [appConfig] : []),
 ]
+
+export default config
