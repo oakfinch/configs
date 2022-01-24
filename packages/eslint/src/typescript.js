@@ -2,7 +2,7 @@ module.exports = {
   extends: ["../src/base.js"],
   overrides: [
     {
-      files: ["src/**/*.+(ts|tsx)"],
+      files: ["**/*.+(js|jsx|ts|tsx)"],
       extends: [
         "airbnb-typescript/base",
         "plugin:@typescript-eslint/recommended",
