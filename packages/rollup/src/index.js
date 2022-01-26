@@ -20,7 +20,8 @@ const library = (format) => ({
     dir: `${OUT_DIR}/${format}`,
     format,
     exports: 'named',
-    preserveModules: true
+    preserveModules: true,
+    preserveModulesRoot: 'src'
   },
   plugins: plugins(`${OUT_DIR}/${format}`, true)
 })
