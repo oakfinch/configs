@@ -33,10 +33,9 @@ yarn add -D @oakfinch/rollup-config
 
 `rollup.config.js`
 ```javascript
-import { config } from '@oakfinch/rollup-config'
+import { configs } from '@oakfinch/rollup-config'
 
-export default {
-  ...config,
-  // your rules here
-}
+export default [
+  ...configs,
+]
 ```
