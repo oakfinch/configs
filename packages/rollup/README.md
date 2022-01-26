@@ -35,7 +35,11 @@ yarn add -D @oakfinch/rollup-config
 ```javascript
 import { configs } from '@oakfinch/rollup-config'
 
-export default [
-  ...configs,
-]
+export default configs
 ```
+
+For libraries, CommonJS and ES modules will be created in `dist/cjs` and `dist/es`.
+
+An application bundle will be built in `dist/bundle/app.js`
+(and `dist/bundle/app.min.js`) if your project has a file named `src/app.js`
+(or `src/app.ts`) with that file being used as the entrypoint.
